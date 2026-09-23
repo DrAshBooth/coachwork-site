@@ -18,8 +18,8 @@
 <body>
 <nav><a href="/">Coachwork</a></nav>
 <h1>Coachwork Privacy Policy</h1>
-<p><strong>Effective date: 23 August 2026</strong></p>
-<p>Coachwork is an iPhone workout tracker. This policy describes what the app does with your data. The short version: your training data lives on your device and in your own iCloud, we run no accounts and no analytics, and the only thing that ever leaves your device is programme text you explicitly ask us to parse — which we process transiently and do not store.</p>
+<p><strong>Effective date: 22 September 2026</strong></p>
+<p>Coachwork is an iPhone workout tracker. This policy describes what the app does with your data. The short version: your training data lives on your device and in your own iCloud, we run no accounts and no analytics, and the only things that ever leave your device are programme text you explicitly ask us to parse and the messages you send to Coach, the in-app chat that writes and adjusts programmes — both of which we process transiently and do not store.</p>
 <h2>Data we do not collect</h2>
 <ul>
 <li><strong>No accounts.</strong> Coachwork has no sign-up, no login, and no user profiles.</li>
@@ -27,16 +27,31 @@
 <li><strong>No payment details.</strong> Subscriptions are handled entirely by Apple through your App Store account. We never see your payment information.</li>
 </ul>
 <h2>Where your training data lives</h2>
-<p>Everything you record — programmes, logged sets, cardio completions, body metrics, settings — is stored in a database on your device and, via Apple&#x27;s CloudKit, in <strong>your private iCloud database</strong>. That private database is encrypted and controlled by your Apple ID; we have no ability to read it. Deleting the app removes the on-device copy; your iCloud copy can be managed in iOS Settings under your Apple ID&#x27;s iCloud storage.</p>
+<p>Everything you record — programmes, logged sets, cardio completions, body metrics, Coach conversations, settings — is stored in a database on your device and, via Apple&#x27;s CloudKit, in <strong>your private iCloud database</strong>. That private database is encrypted and controlled by your Apple ID; we have no ability to read it. Deleting the app removes the on-device copy; your iCloud copy can be managed in iOS Settings under your Apple ID&#x27;s iCloud storage.</p>
+<p>A workout you are part-way through is held in a file on this phone only, until you finish it. It is not in iCloud and not in your device backup. If you discard the workout, the app deletes that file.</p>
 <h2>Programme parsing</h2>
 <p>When you paste a training programme and ask Coachwork to parse it, the text you pasted is sent over an encrypted connection to our parsing service, which uses Anthropic&#x27;s Claude API to convert it into a structured programme. This processing is transient:</p>
 <ul>
-<li>The service <strong>stores neither your programme text nor the parsed result</strong>. Its logs record only request status, timing, and token counts — never content.</li>
+<li>The service <strong>stores neither your programme text nor the parsed result</strong>. Its logs record only request status, timing, token counts, and anonymous counts of unsupported-feature categories — never content.</li>
 <li>Anthropic processes the text as a sub-processor solely to perform the conversion, under its commercial API terms.</li>
-<li>Nothing else in the app ever sends data off your device.</li>
+<li>The only other thing the app sends off your device is a Coach message, and what goes with it is listed below. Nothing else in the app ever sends data off your device.</li>
 </ul>
-<h2>The free parse and your device key</h2>
-<p>To offer one free parse per device, the app generates a <strong>random device identifier</strong> that is not derived from you, your Apple ID, or your hardware, and is never shared across your devices. Our service keeps an anonymous record that this identifier has used its free parse. It contains no personal information and cannot be linked back to you.</p>
+<h2>Coach</h2>
+<p>Coach is a chat inside the app that writes a training programme with you and, later, adjusts the one you are running. When you send a message, these things travel over an encrypted connection to our service and on to Anthropic&#x27;s Claude API:</p>
+<ul>
+<li>the conversation so far, which is everything you and Coach have typed in it;</li>
+<li>whether you use kilograms or pounds;</li>
+<li>when you are asking for a change to the programme you are currently running, that programme&#x27;s structure — its sessions, exercises, sets and reps — plus which week of it you are in and today&#x27;s weekday.</li>
+</ul>
+<p>Nothing else goes with it. Your logged sets, loads, personal records, body metrics and Apple Health data are never sent. Coach never asks for injuries, medical history, your age, or your body measurements, and it does not give medical advice. It is a chat, so you can type anything into it; whatever you type is sent, so send only what you are content to send.</p>
+<p>Our service <strong>stores nothing from a turn</strong> — not your messages, not Coach&#x27;s reply, not your programme&#x27;s structure. It holds them only for as long as the reply takes, which is why your phone sends the whole conversation again each time. Anthropic processes what is sent as a sub-processor solely to produce the reply, under its commercial API terms. Building a programme Coach has written sends its text through the parsing service described above.</p>
+<p>Your conversations are stored on your device and in your private iCloud database like the rest of your training data, and deleting a conversation removes it from both.</p>
+<h2>Usage counts</h2>
+<p>Usage needs counting, so our service keeps one kind of anonymous count. It holds nothing you or Coach wrote.</p>
+<ul>
+<li><strong>Subscription usage.</strong> Coach messages, programme builds, the parses you run, refunded turns and token usage are counted against an anonymous record keyed to your subscription, kept for up to 31 days, used only to count usage — it contains no purchase details and cannot be linked to you.</li>
+</ul>
+<p>If Apple tells us a subscription has been refunded or revoked, we record that as an anonymous marker only, which expires with the subscription itself.</p>
 <h2>Apple Health</h2>
 <p>If you grant permission, Coachwork can <strong>write your finished workouts to Apple Health</strong> and <strong>read your bodyweight from Apple Health</strong> to show it in the Metrics tab. Health data is used only for these features. Like the rest of your training data, it stays within your devices and your private iCloud database — it is <strong>never sent to our servers or to any third party</strong>. You can revoke access at any time in the Health app, and the app continues to work fully without it.</p>
 <h2>Export</h2>
