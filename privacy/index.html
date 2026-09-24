@@ -18,8 +18,14 @@
 <body>
 <nav><a href="/">Coachwork</a></nav>
 <h1>Coachwork Privacy Policy</h1>
-<p><strong>Effective date: 22 September 2026</strong></p>
-<p>Coachwork is an iPhone workout tracker. This policy describes what the app does with your data. The short version: your training data lives on your device and in your own iCloud, we run no accounts and no analytics, and the only things that ever leave your device are programme text you explicitly ask us to parse and the messages you send to Coach, the in-app chat that writes and adjusts programmes — both of which we process transiently and do not store.</p>
+<p><strong>Effective date: 24 September 2026</strong></p>
+<p>Coachwork is an iPhone workout tracker. This policy describes what the app does with your data. The short version: your training data lives on your device and in your own iCloud, and we run no accounts and no analytics. Beyond your iCloud, three features send your data off your device, each one only when you use it:</p>
+<ul>
+<li><strong>Parsing:</strong> programme text that you ask us to parse.</li>
+<li><strong>Coach:</strong> the messages that you send to Coach, the in-app chat that writes and adjusts programmes.</li>
+<li><strong>Strava:</strong> the workouts that you upload to Strava, after you connect a Strava account.</li>
+</ul>
+<p>We process parse text and Coach messages transiently, and we do not store them. A Strava upload goes from your iPhone straight to Strava, and never through our servers.</p>
 <h2>Data we do not collect</h2>
 <ul>
 <li><strong>No accounts.</strong> Coachwork has no sign-up, no login, and no user profiles.</li>
@@ -34,8 +40,9 @@
 <ul>
 <li>The service <strong>stores neither your programme text nor the parsed result</strong>. Its logs record only request status, timing, token counts, and anonymous counts of unsupported-feature categories — never content.</li>
 <li>Anthropic processes the text as a sub-processor solely to perform the conversion, under its commercial API terms.</li>
-<li>The only other thing the app sends off your device is a Coach message, and what goes with it is listed below. Nothing else in the app ever sends data off your device.</li>
+<li>Two other features send data off your device: Coach and Strava. The sections below list what each one sends.</li>
 </ul>
+<p>Our legal basis for parsing your text is our contract with you: parsing is part of the paid service that you subscribe to.</p>
 <h2>Coach</h2>
 <p>Coach is a chat inside the app that writes a training programme with you and, later, adjusts the one you are running. When you send a message, these things travel over an encrypted connection to our service and on to Anthropic&#x27;s Claude API:</p>
 <ul>
@@ -43,19 +50,71 @@
 <li>whether you use kilograms or pounds;</li>
 <li>when you are asking for a change to the programme you are currently running, that programme&#x27;s structure — its sessions, exercises, sets and reps — plus which week of it you are in and today&#x27;s weekday.</li>
 </ul>
-<p>Nothing else goes with it. Your logged sets, loads, personal records, body metrics and Apple Health data are never sent. Coach never asks for injuries, medical history, your age, or your body measurements, and it does not give medical advice. It is a chat, so you can type anything into it; whatever you type is sent, so send only what you are content to send.</p>
+<p>Nothing else goes with it. A Coach message never carries your logged sets, loads, personal records, body metrics or Apple Health data. Coach never asks for injuries, medical history, your age, or your body measurements, and it does not give medical advice. It is a chat, so you can type anything into it; whatever you type is sent, so send only what you are content to send.</p>
 <p>Our service <strong>stores nothing from a turn</strong> — not your messages, not Coach&#x27;s reply, not your programme&#x27;s structure. It holds them only for as long as the reply takes, which is why your phone sends the whole conversation again each time. Anthropic processes what is sent as a sub-processor solely to produce the reply, under its commercial API terms. Building a programme Coach has written sends its text through the parsing service described above.</p>
+<p>Our legal basis for sending your Coach messages is our contract with you: Coach is part of the paid service that you subscribe to.</p>
 <p>Your conversations are stored on your device and in your private iCloud database like the rest of your training data, and deleting a conversation removes it from both.</p>
 <h2>Usage counts</h2>
 <p>Usage needs counting, so our service keeps one kind of anonymous count. It holds nothing you or Coach wrote.</p>
 <ul>
 <li><strong>Subscription usage.</strong> Coach messages, programme builds, the parses you run, refunded turns and token usage are counted against an anonymous record keyed to your subscription, kept for up to 31 days, used only to count usage — it contains no purchase details and cannot be linked to you.</li>
 </ul>
-<p>If Apple tells us a subscription has been refunded or revoked, we record that as an anonymous marker only, which expires with the subscription itself.</p>
+<p>Our legal basis for these counts is our contract with you: they are part of how we deliver the paid service.</p>
+<p>If Apple tells us a subscription has been refunded or revoked, we record that as an anonymous marker only, which expires with the subscription itself. Our legal basis for this marker is our legitimate interest in preventing abuse of the service.</p>
+<h2>Strava</h2>
+<p>Strava is optional. When you connect a Strava account, Coachwork can upload your finished workouts to it. Coachwork writes to Strava, and it reads nothing from your Strava account except the status of its own uploads. A Strava connection is free, and it is not a Coachwork account.</p>
+<h3>Before you connect</h3>
+<p>Before you connect, the Strava screen in Settings shows what an upload holds: &quot;Connecting uploads each finished workout — name, time, exercises, sets and loads — to Strava. Cardio doesn&#x27;t upload.&quot; The screen also says that your Strava privacy settings decide who sees each workout. It shows our support address and links to this policy, which says how to withdraw your consent and how to delete Coachwork&#x27;s Strava data (see &quot;Your consent, and how to withdraw it&quot; below). When you tap &quot;Connect with Strava&quot;, Strava&#x27;s own page asks you to sign in and to give your permission. It asks each time you connect. Coachwork asks Strava only for permission to upload activities.</p>
+<h3>What an upload holds</h3>
+<p>An upload holds:</p>
+<ul>
+<li>the workout&#x27;s name, or &quot;Weight Lifting&quot; for an ad-hoc workout, and the activity type Weight Training;</li>
+<li>the workout&#x27;s start time, its length, and your iPhone&#x27;s time zone offset at the start;</li>
+<li>your working and extra sets, by exercise: the reps, the load, the seconds or the distance of each set;</li>
+<li>on most uploads, the workout&#x27;s random ID, which Coachwork makes. Strava uses it to find a second copy of the same workout.</li>
+</ul>
+<p>An upload never holds a warm-up, a skipped set, a note, the programme&#x27;s name, a load suggestion, a personal record, your bodyweight or any Apple Health data. Coachwork never uploads cardio.</p>
+<h3>When the app uploads</h3>
+<p>Coachwork can upload a finished workout that has at least one logged set: a workout from your programme, or an ad-hoc workout.</p>
+<ul>
+<li><strong>When you finish a workout.</strong> The summary shows the switch &quot;Upload to Strava&quot; for that workout. On the first finish, the switch starts at your setting &quot;Upload workouts to Strava&quot;, which is on when you connect. When you tap Done with the switch on, the app uploads the workout.</li>
+<li><strong>From the Calendar.</strong> When you tap &quot;Upload to Strava&quot; on a finished workout in the Calendar, the app uploads that one workout.</li>
+<li><strong>Later.</strong> When an upload cannot go at once, for example with no network, the workout waits on this iPhone. The app tries again each time you open it, and when your iPhone gets a network while the app is open. After 7 days, the workout leaves this waiting list, and you can upload it from the Calendar.</li>
+</ul>
+<p>Each workout goes to Strava once. When you change a workout after its upload, Coachwork does not send the change. Strava keeps the version that you uploaded, and you can change it on Strava.</p>
+<h3>What our servers see</h3>
+<p>An upload goes from your iPhone straight to Strava. It never passes through our servers.</p>
+<p>Three steps need Coachwork&#x27;s secret key for Strava, and the app does not hold that key: the connect, the renewal of the app&#x27;s access, and the end of that access. For these steps, the app sends Strava&#x27;s sign-in code or one of the app&#x27;s Strava tokens to our Strava service. The service adds the key, passes the request to Strava, and passes the answer back. It sees that code or token, and never a workout.</p>
+<ul>
+<li>The request to connect can also carry a proof from Apple (App Attest) that it comes from a genuine copy of Coachwork. The service checks the proof and keeps nothing of it.</li>
+<li>Strava&#x27;s answer to a connect also describes your Strava profile. The service drops that part. It passes back to the app only the tokens, the time they expire, the permission that you gave and Strava&#x27;s address for uploads.</li>
+<li>The service counts requests from each network address in memory, to limit how often one address can call it. It never logs or stores your address. Our legal basis for this count is our legitimate interest in preventing abuse of the service.</li>
+<li>The app sends no subscription details to this service, so the service cannot link a request to your subscription.</li>
+</ul>
+<p>The service stores nothing. Its log line holds its result, Strava&#x27;s result, the time that the request took, and which of the three steps it was. The line holds no code, no token and nothing about you. This service is separate from the service for parsing and Coach. Nothing from Strava reaches Coach, the parsing service or Anthropic.</p>
+<h3>What Coachwork keeps</h3>
+<p>Coachwork keeps its Strava tokens, with the details that come with them, in the Keychain on this iPhone. iCloud does not sync them, and no other iPhone receives them. While Strava processes an upload, the app also keeps Strava&#x27;s ID for that upload, for 7 days at most. Coachwork keeps nothing else from Strava: no name, photo or location from your profile, and no account ID or activity ID. No server of ours keeps any Strava data.</p>
+<p>Each workout that you upload keeps the date on which it went to Strava. That date is part of your training data, on your device and in your iCloud.</p>
+<h3>Who sees your workouts on Strava</h3>
+<p>Coachwork sets no visibility on a workout that it uploads. Your Strava privacy settings decide who sees each one. Strava&#x27;s privacy policy, at <strong>strava.com/legal/privacy</strong>, governs what Strava does with your workouts.</p>
+<p><strong>Strava&#x27;s Usage Data.</strong> Strava&#x27;s API policy tells us to include this statement. Strava can monitor and collect Usage Data, and it can use Usage Data for any business purpose, internal or external. For example, Strava can use it to improve the Strava API or the Strava platform, to give developer or user support, or to make sure that developers obey Strava&#x27;s API agreement.</p>
+<h3>Your consent, and how to withdraw it</h3>
+<p>Our legal basis for uploading your workouts to Strava is your consent. You give it when you connect, and you withdraw it when you tap Disconnect.</p>
+<p><strong>Disconnect.</strong> Disconnect is on the Strava screen, and it asks you to confirm. The app then asks Strava to end Coachwork&#x27;s access, deletes the tokens from this iPhone, and empties the waiting list. The connection ends on every iPhone that is connected to that Strava account. The screen then confirms the deletion in writing: &quot;Coachwork deleted its Strava connection from this iPhone.&quot; Our servers keep no Strava data, so Disconnect deletes all the Strava data that Coachwork keeps on this iPhone.</p>
+<p>If the request to Strava fails, the app still deletes the tokens and empties the waiting list. The screen then asks you to remove Coachwork on Strava with &quot;Manage on Strava&quot;, a link to <strong>strava.com/settings/apps</strong>. You can also remove Coachwork on that page at any time.</p>
+<p><strong>When Strava ends the connection.</strong> Strava can end the connection, for example when you remove Coachwork on Strava or tap Disconnect on another iPhone. The app learns of it at its next call to Strava, and it then deletes the tokens from this iPhone. The screen confirms the deletion in writing, as Disconnect does. The app keeps the waiting list. When you connect again, it asks before it uploads those workouts.</p>
+<p><strong>When you delete the app.</strong> Deleting the app does not tell Strava. To end the connection, tap Disconnect before you delete the app, or remove Coachwork on Strava. When you install Coachwork again, it ends any earlier connection that it finds and deletes those tokens.</p>
+<p><strong>Workouts on Strava stay there.</strong> Coachwork never deletes, edits or hides a workout on Strava, and Strava gives apps no way to delete one. To delete a workout from Strava, delete it on Strava. A workout in Coachwork keeps its upload date after you disconnect.</p>
 <h2>Apple Health</h2>
 <p>If you grant permission, Coachwork can <strong>write your finished workouts to Apple Health</strong> and <strong>read your bodyweight from Apple Health</strong> to show it in the Metrics tab. Health data is used only for these features. Like the rest of your training data, it stays within your devices and your private iCloud database — it is <strong>never sent to our servers or to any third party</strong>. You can revoke access at any time in the Health app, and the app continues to work fully without it.</p>
 <h2>Export</h2>
 <p>The CSV export in Settings creates files on your device and hands them to the iOS share sheet. Where they go from there is entirely your choice.</p>
+<h2>Who is responsible for your data</h2>
+<p>Coachwork&#x27;s data controller is <strong>Ash Booth</strong>, United Kingdom. In this policy, &quot;we&quot;, &quot;us&quot; and &quot;our&quot; mean Ash Booth. To reach the controller, use the address under Contact.</p>
+<h2>Your rights</h2>
+<p>UK data protection law gives you rights over your personal data. Among them are the rights to see it, to correct it, to delete it, to limit or object to its use, and to receive a copy of it. Where our legal basis is your consent, as it is for Strava, you can withdraw your consent at any time.</p>
+<p>Most of your data is on your devices and in your own iCloud, where you can see, export and delete it yourself. Our servers keep none of your training data and nothing that you or Coach wrote. To use a right, write to the address under Contact.</p>
+<p>If you are not satisfied with how we use your data, you can complain to the UK&#x27;s data protection regulator, the <strong>Information Commissioner&#x27;s Office</strong>, at <strong>ico.org.uk/make-a-complaint</strong>. If you are in the European Union or the European Economic Area, you can also complain to the data protection authority of your country.</p>
 <h2>Children</h2>
 <p>Coachwork is not directed at children under 13 and we do not knowingly process their data.</p>
 <h2>Changes</h2>
